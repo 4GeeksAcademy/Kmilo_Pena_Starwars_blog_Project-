@@ -2,12 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
-//import { Link, useParams } from "react-router-dom";
-import { Link, useParams } from "react-dom"
+import { Link, useParams } from "react-router-dom";
 //import { NavLink } from 'react-bootstrap';
+import { Outlet } from "react-router-dom";
 
 
- export const  Root  = () => {
+ export default function Root () {
 
 return (
 		<>
@@ -24,9 +24,9 @@ return (
 						Some quick example text to build on the card title and make up the
 						bulk of the card's content.
 					</Card.Text>
-					{/* <Link to={"/singleCard/"}> */}
+					<Link to={"/singleCard/"}>
 						<Button variant="outline-primary">Learn more!</Button>
-					{/* </Link> */}
+					</Link>
 					</Card.Body>
 				</Card>
 			

@@ -1,13 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { NavigationBar } from './navbar';
+//import { NavigationBar } from './navbar';
 
 
-export const BasicExample = () => {
+export default function DetailsCard  ()  {
   return (
     <>
     <div className='content-center'>
-        < NavigationBar />
+        {/* < NavigationBar /> */}
         <div>
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />
