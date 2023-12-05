@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link, useParams } from "react-router-dom";
-//import { NavLink } from 'react-bootstrap';
+import { NavigationBar } from './navbar';
 //import { Outlet } from "react-router-dom";
 
 
@@ -11,6 +11,7 @@ import { Link, useParams } from "react-router-dom";
 
 return (
 		<>
+		<NavigationBar />
        <h3 style={{marginLeft:"15rem", marginTop:"5rem"}}>Characters</h3> 
 	<div className="container-fluid">
 		<Carousel style={{width:"95rem", marginLeft:"5rem", marginTop:"0px"}}>
@@ -24,7 +25,7 @@ return (
 						Some quick example text to build on the card title and make up the
 						bulk of the card's content.
 					</Card.Text>
-					<Link to={"/singleCard/"}>
+					<Link to={"singleCard"}>
 						<Button variant="outline-primary">Learn more!</Button>
 					</Link>
 					</Card.Body>
