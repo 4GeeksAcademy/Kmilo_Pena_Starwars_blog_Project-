@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link, useParams } from "react-router-dom";
 //import { NavLink } from 'react-bootstrap';
-import { Outlet } from "react-router-dom";
+//import { Outlet } from "react-router-dom";
 
 
  export default function Root () {

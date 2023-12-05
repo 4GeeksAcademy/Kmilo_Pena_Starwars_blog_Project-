@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
       {
-        path: "contacts/:contactId",
+        path: "cards/:cardId",
         element: <DetailsCard />,
       },
 ]);
