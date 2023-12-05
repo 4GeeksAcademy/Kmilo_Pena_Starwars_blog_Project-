@@ -13,8 +13,8 @@ export const NavigationBar = () => {
 	return (
 	  <Navbar className="bg-body-tertiary justify-content-between" style={{width:"90rem"}}>
 		<Form inline style={{marginLeft:"15rem"}}>
-		  <Link to={"/characters"}>
-			<Button variant="outline-secondary" >Secondary</Button>{' '}
+		  <Link to={"/"}>
+			<img src='https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG42.png' style={{width:'5rem', height:'4rem'}}/>
 		  </Link>		
 		</Form>
 		<Form inline>
