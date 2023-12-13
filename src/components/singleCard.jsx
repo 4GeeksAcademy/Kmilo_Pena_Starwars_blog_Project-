@@ -23,7 +23,7 @@ export default function DetailsCard  ()  {
       <div className='content-center'>
            < NavigationBar /> 
           <div>
-              <Card style={{ width: '50rem', height:'40rem', marginLeft:'27rem', marginTop:'5rem' }}>
+              <Card style={{ width: '28rem', height:'39rem', marginLeft:'28rem', marginTop:'3rem' }}>
               <Card.Img variant="left" src="https://www.sideshow.com/cdn-cgi/image/width=850,quality=90,f=auto/https://www.sideshow.com/storage/product-images/912537/anakin-skywalker-artisan-edition_star-wars_gallery_64c4173d253f9.jpg" 
                                             style={{width:"28rem", height:"24rem"}} />
               <Card.Body>

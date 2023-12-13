@@ -6,9 +6,9 @@ import Col from 'react-bootstrap/Col';
 import React from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
+//import { Favorite } from './characters';
 
-
-export const NavigationBar = () => {
+export const NavigationBar = ({favorite, setFavorite}) => {
 
 	return (
 	  <Navbar className="bg-body-tertiary justify-content-between" style={{width:"90rem"}}>
@@ -25,7 +25,24 @@ export const NavigationBar = () => {
 						Favorites {0}
 					</Dropdown.Toggle>
 					<Dropdown.Menu>
-						<Dropdown.Item href="#/action-1">(Empty)</Dropdown.Item>
+						{ favorite && favorite != undefined &&
+						favorite.length > 0 ? 
+						favorite.map( (item, i)=>{
+
+							return (
+								<>
+								<Dropdown.Item>
+										{item}	
+									<Form>
+										<button onClick={() => {
+											let newFav = favorite.filter((item, index) => index != i) 
+											setFavorite(newFav)
+										}} class="bi bi-trash3" type="submit">Delete</button>
+									</Form>
+								</Dropdown.Item>
+								</>
+							)
+						}):" "}
 					</Dropdown.Menu>
 				</Dropdown>
 			</Col>
