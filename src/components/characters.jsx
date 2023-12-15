@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { NavigationBar } from './navbar';
 import React, { useState, useEffect}  from "react";
 import { Form } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
 
 
 // import { key } from 'localforage';
@@ -14,7 +14,7 @@ import { Form } from "react-router-dom";
 
 
 
- export default function Root () {
+ export default function Characters () {
 	const character = {
 		favorite: true
 	};
@@ -48,7 +48,7 @@ return (
 							<ul>{"Gender: " +item.gender}</ul>
 							<ul>{"Hair: " +item.hair_color}</ul>
 							</Card.Text>
-							<Link to={"/details/"+ item.name}>
+							<Link to={"/detailsCharacters/"+ item.name}>
 								<Button variant="outline-primary">Learn more!</Button>
 							</Link>
 							<div>
@@ -64,7 +64,9 @@ return (
 		
 		</Carousel> 
 		</div>
-
+		<div id="detail">
+        	<Outlet />
+      	</div>
 		
 	  </>
 	);
@@ -85,8 +87,8 @@ return (
 			// 	: "Add to favorites"
 			// }
 			>
-			{/* {favorite ? "★" : "☆"} */}
-			"★"
+			{favorite ? "★" : "☆"}
+			{/* "★" */}
 			</button>
 		</Form>
 	);

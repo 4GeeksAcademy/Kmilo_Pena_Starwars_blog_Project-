@@ -3,12 +3,15 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import CloseButton from 'react-bootstrap/CloseButton';
 import React from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 //import { Favorite } from './characters';
 
 export const NavigationBar = ({favorite, setFavorite}) => {
+
+	
 
 	return (
 	  <Navbar className="bg-body-tertiary justify-content-between" style={{width:"90rem"}}>
@@ -22,7 +25,7 @@ export const NavigationBar = ({favorite, setFavorite}) => {
 			<Col xs="auto">
 				<Dropdown>
 					<Dropdown.Toggle variant="success" id="dropdown-basic">
-						Favorites {0}
+						Favorites 
 					</Dropdown.Toggle>
 					<Dropdown.Menu>
 						{ favorite && favorite != undefined &&
@@ -32,17 +35,20 @@ export const NavigationBar = ({favorite, setFavorite}) => {
 							return (
 								<>
 								<Dropdown.Item>
-										{item}	
+									<div style={{display:'flex'}}>
+										{item}
 									<Form>
-										<button onClick={() => {
+										<i class="bi bi-trash3"></i>
+										<CloseButton  onClick={() => {
 											let newFav = favorite.filter((item, index) => index != i) 
 											setFavorite(newFav)
-										}} class="bi bi-trash3" type="submit">Delete</button>
+										}}type="submit"/>
 									</Form>
+									</div>
 								</Dropdown.Item>
 								</>
 							)
-						}):" "}
+						}):<h5>Empty</h5>}
 					</Dropdown.Menu>
 				</Dropdown>
 			</Col>

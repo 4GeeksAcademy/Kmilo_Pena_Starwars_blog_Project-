@@ -5,13 +5,13 @@ import React,{ useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
 
-export default function DetailsCardCharacters  ()  {
+export default function DetailsCardTransportation ()  {
   const params = useParams()
   
   const [data, setData] = useState([]);
 	console.log(data)
 	useEffect(() => {
-		fetch('https://swapi.dev/api/people/')
+		fetch('https://swapi.dev/api/starships/')
 		  .then(response => response.json())
 		  .then(json => setData(json.results.find(item =>item.name == params.name)))
 		  .catch(error => console.error(error));
@@ -29,10 +29,10 @@ export default function DetailsCardCharacters  ()  {
               <Card.Body>
               <Card.Title>{data.name}</Card.Title>
               <Card.Text variant="right">
-                  <ul>{"Gender: "+data.gender}</ul>
-                  <ul>{"Skin Color: "+data.skin_color}</ul>
-                  <ul>{"Height: "+data.height}</ul>
-                  <ul>{"Birth Year: "+data.birth_year}</ul>
+                  <ul>{"Model: "+data.model}</ul>
+                  <ul>{"Manufacturer Period: "+data.manufacturer}</ul>
+                  <ul>{"Cost in Credits: "+data.cost_in_credits}</ul>
+                  <ul>{"Length: "+data.length}</ul>
               </Card.Text>
               </Card.Body>
               </Card>
@@ -44,4 +44,3 @@ export default function DetailsCardCharacters  ()  {
     );
   
 }
-
